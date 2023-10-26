@@ -17,8 +17,9 @@ export const postsState = atom<PostResponse[]>({
   default: [],
 });
 
+const postsRepository = new PostsRepository(clientGatewayCreator());
+
 export const usePostsRepository = () => {
-  const postsRepository = new PostsRepository(clientGatewayCreator());
   const [isLoading, setIsLoading] = useState(false);
   const [fetchCompleted, setFetchCompleted] = useState(false);
   const [posts, setPosts] = useRecoilState(postsState);
@@ -31,7 +32,7 @@ export const usePostsRepository = () => {
     }
     setIsLoading(false);
     setFetchCompleted(true);
-  }, [setPosts]);
+  }, [setPosts, setIsLoading, setFetchCompleted]);
 
   return { posts, isLoading, fetchCompleted, loadPosts };
 };
