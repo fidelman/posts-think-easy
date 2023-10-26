@@ -5,7 +5,6 @@ import Cookies from "js-cookie";
 export class ServerCookieProvider implements CookieProvider {
   set(name: string, value: string) {
     Cookies.set(name, value);
-    // cookies().set(name, value);
   }
 
   get(name: string) {
@@ -13,8 +12,7 @@ export class ServerCookieProvider implements CookieProvider {
   }
 
   remove(name: string) {
-    // cookies().delete(name);
-    Cookies.remove(name);
+    return cookies().delete(name);
   }
 }
 

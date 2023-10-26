@@ -1,10 +1,4 @@
-import { AuthRepository, clientAuthRepository } from "@/auth/AuthRepository";
-import Axios, {
-  AxiosError,
-  AxiosInstance,
-  AxiosRequestConfig,
-  CreateAxiosDefaults,
-} from "axios";
+import Axios, { AxiosRequestConfig, CreateAxiosDefaults } from "axios";
 import { cookies } from "next/headers";
 import { BASE_URL, instanceCreator } from "./instance-creator";
 

@@ -1,4 +1,3 @@
-import { getThinkEasy as createClientGateway } from "@/api/clientInstanceEndpoints";
 import {
   Auth,
   LoginInput,

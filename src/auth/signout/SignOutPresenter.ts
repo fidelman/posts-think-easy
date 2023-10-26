@@ -1,4 +1,3 @@
-import { useRouter } from "next/navigation";
 import { AuthRepository } from "../AuthRepository";
 import { useCallback } from "react";
 import { clientAuthRepository } from "../clientAuthInstance";

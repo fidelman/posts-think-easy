@@ -11,7 +11,7 @@ export interface Post {
 
 export interface PostListItemProps {
   post: Post;
-  isAuthorAvailable: boolean;
+  isAuthorAvailable?: boolean;
 }
 
 export const PostListItem = ({

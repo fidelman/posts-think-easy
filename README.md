@@ -60,6 +60,7 @@ The role of presenters in my design is to:
 
 ## Specific Page Considerations
 
+- **Refresh Authorization**: I have implemented logic to refresh the access token as it was asked in the task, but I am not sure it works as expected. The API `auth/refresh-token` works only when the token is fresh, otherwise it throws 401: Unauthorized. Maybe I am using this wrong, appreciate your feedback.
 - **Post page and Posts by User page**: I made these Server-Side Rendered (SSR), which means the repositories are stateless for these pages.
 - **Auth State**: I decided to manage this exclusively through cookies. I found a need to create two instances of gateways for the server and client to handle both server and browser cookies properly.
 
@@ -67,4 +68,4 @@ The role of presenters in my design is to:
 
 ---
 
-I appreciate the tasks and look forward to feedback, especially regarding the Orval.js library's dual-instance implementation and challenges faced with Recoil selectors' caching behavior.
+I appreciate the tasks and look forward to feedback, especially regarding the Orval.js library's dual-instance implementation, refresh token implementation and challenges faced with Recoil selectors' caching behavior.
