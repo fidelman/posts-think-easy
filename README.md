@@ -30,7 +30,7 @@ I designed the architecture of the application with the primary goal of separati
 
 I chose the MVP (Model-View-Presenter) pattern for several reasons:
 
-- **Separation of Logic**: It enables a clear separation between the user interface (View), the business logic (Presenter), and the data (Model).
+- **Separation of Logic**: It enables a clear separation between the user interface (View), the connection between View and Model (Presenter), and the data and business logic (Model).
 - **Testability**: Each component can be tested in isolation.
 - **Flexibility**: It's easier to swap out or modify a single component without affecting the others.
 
